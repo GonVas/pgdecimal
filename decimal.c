@@ -20,7 +20,7 @@ Decimal64GetDatum(PGDecimal64 X)
         }			myunion;
 
         myunion.value = X;
-        return SET_8_BYTES(myunion.retval);
+        return myunion.retval;
 }
 
 PGDecimal64
@@ -32,7 +32,7 @@ DatumGetDecimal64(Datum X)
                 PGDecimal64	retval;
         }			myunion;
 
-        myunion.value = GET_8_BYTES(X);
+        myunion.value = X;
         return myunion.retval;
 }
 
