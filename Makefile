@@ -2,11 +2,13 @@
 
 MODULE_big = decimal
 OBJS = decimal.o decimal64.o decimal128.o
-PG_CPPFLAGS = -I$(TOOLCHAIN_DIR)/installed/include/decnumber
-SHLIB_LINK = -L$(TOOLCHAIN_DIR)/installed/lib -ldecnumber 
+#PG_CPPFLAGS = -I$(TOOLCHAIN_DIR)/installed/include/decnumber
+PG_CPPFLAGS = -I$(TOOLCHAIN_DIR)
+#SHLIB_LINK = -L$(TOOLCHAIN_DIR)/installed/lib -ldecnumber 
+SHLIB_LINK = -L$(TOOLCHAIN_DIR) -ldecnumber 
 
 EXTENSION = decimal
-DATA = decimal--2.0.sql
+DATA = decimal--1.0.sql
 
 REGRESS = decimal
 
