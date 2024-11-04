@@ -1,5 +1,6 @@
 #include "decimal.h"
 
+
 // 
 // Forward declarations.
 //

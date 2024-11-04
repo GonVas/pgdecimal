@@ -5,6 +5,7 @@
 
 #include "utils/builtins.h"
 #include "utils/formatting.h"
+#include "common/hashfn.h"
 
 #include "decSingle.h"
 #include "decDouble.h"
@@ -56,6 +57,6 @@ Datum Decimal64GetDatum(PGDecimal64 d);
 #define DEC_STATUS_DIV  (DEC_Division_by_zero | DEC_Division_impossible | DEC_Division_undefined | DEC_STATUS_OFUF)
 #define DEC_STATUS_ALL  (0xFFFF)
 
-extern Datum hash_any(register const unsigned char* p, register int len);
+//extern Datum hash_any(register const unsigned char* p, register int len);
 
 #endif  /* _PG_DECIMAL_H_ */
